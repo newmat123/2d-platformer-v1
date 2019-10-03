@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    
+
+
     public float speed;             //Spillerens hastighed
     public float jumpForce;         //Spillerens hoppe styrke
     private float moveInput;        //Spillerens input
@@ -39,6 +40,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (isGrounded == true) //Checker om objektet rammer laget "ground"
         {
+
             extraJumps = extraJumpsValue;
             
         }
@@ -57,7 +59,5 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
-
-   
-
+ 
 }
