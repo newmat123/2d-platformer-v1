@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public GameObject winHolder; //det er det gameobject der holder alt ui der skal wærer når man vinder
-
+    
     public float speed;             //Spillerens hastighed
     public float jumpForce;         //Spillerens hoppe styrke
     private float moveInput;        //Spillerens input
@@ -59,15 +58,6 @@ public class PlayerMovement : MonoBehaviour
     }
 
 
-    private void OnTriggerEnter2D(Collider2D collision) //kører når man rammer en trigger
-    {
-        if(collision.gameObject.tag == "trigger") // tjækker om triggeren er den rigtige
-        {
-
-            winHolder.SetActive(true); //aktivere win ui
-            Time.timeScale = 0; //pauser tiden eller spilet.
-
-        }
-    }
+   
 
 }
