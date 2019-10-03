@@ -64,10 +64,18 @@ public class PlayerMovement : MonoBehaviour
         if(collision.gameObject.tag == "floor")
         {
 
-            extraJumps = extraJumpsValue;
+            StartCoroutine(Wait(0.2f));
 
         }
 
+    }
+
+    private IEnumerator Wait(float waitTime)
+    {
+        
+        yield return new WaitForSeconds(waitTime);
+        extraJumps = extraJumpsValue;
+          
     }
 
 }
