@@ -10,7 +10,6 @@ public class PlayerMovement : MonoBehaviour
     public float jumpForce;         //Spillerens hoppe styrke
     private float moveInput;        //Spillerens input
 
-
     private Rigidbody2D rb;
 
     private bool isGrounded;        //Checker om spilleren står på jorden
@@ -40,23 +39,20 @@ public class PlayerMovement : MonoBehaviour
     {
         if (isGrounded == true) //Checker om objektet rammer laget "ground"
         {
-
             extraJumps = extraJumpsValue;
             
+              
         }
 
         if(Input.GetKeyDown(KeyCode.Space) && extraJumps > 0)   //Hvis spilleren trykker på "W" og har flere hop
-        {
-           
+        {          
             rb.velocity = Vector2.up * jumpForce;    //Sørger for at spilleren kan hoppe
             extraJumps--;                            //Trækker et jump fra
         }
-        else if (Input.GetKeyDown(KeyCode.Space) && extraJumps == 0 && isGrounded == true) //Hvis spilleren trykker på "W" og kun har et hop
-        {
+        else if (Input.GetKeyDown(KeyCode.Space) && extraJumps == 0 && isGrounded == true && rb.velocity.y == 0) //Hvis spilleren trykker på "W" og kun har et hop
+        {  
             rb.velocity = Vector2.up * jumpForce;    //Sørger for at spilleren kan hoppe
         }
-
-
     }
 
  
