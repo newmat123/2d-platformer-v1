@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerMovement1 : MonoBehaviour
 {
 
 
@@ -33,7 +33,7 @@ public class PlayerMovement : MonoBehaviour
         //Ud fra en cirkels position, radius, og om den rammer det rigtige lag
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
 
-        moveInput = Input.GetAxis("Horizontal");                        //gør sådan at vi kan bruge A og D til at bevæge vores player
+        moveInput = Input.GetAxis("Horizontal2");                        //gør sådan at vi kan bruge A og D til at bevæge vores player
         rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);    //Får spilleren til at bevæge sig
     }
 
@@ -43,7 +43,7 @@ public class PlayerMovement : MonoBehaviour
         {
             extraJumps = extraJumpsValue; //Nulstilles antallet af hop
         }
-        if(Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.Space) && extraJumps > 0)   //Hvis spilleren trykker på "W" og har flere hop
+        if(Input.GetKeyDown(KeyCode.UpArrow) && extraJumps > 0)   //Hvis spilleren trykker på "W" og har flere hop
         {
             rb.velocity = Vector2.up * jumpForce;    //Sørger for at spilleren kan hoppe
             extraJumps--;                            //Trækker et jump fra
