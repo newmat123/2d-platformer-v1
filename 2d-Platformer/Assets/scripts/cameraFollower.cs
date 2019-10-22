@@ -79,6 +79,18 @@ public class cameraFollower : MonoBehaviour
 
     }
 
+
+    public void removeFromList(string name)
+    {
+        if(name == "Player1")
+        {
+            targets.RemoveAt(0);
+        }else if(name == "Player2")
+        {
+            targets.RemoveAt(1);
+        }
+    }
+
     //floaten GetGreatestDis bliver defineret her
     float GetGreatestDis()
     {
@@ -119,14 +131,10 @@ public class cameraFollower : MonoBehaviour
     //vectoren GetCenterPoint bliver defineret her
     Vector3 GetCenterPoint()
     {
-        //chekker om der er flere en bare en spiller
-        if(targets.Count == 1)
+       if(targets.Count == 1)
         {
-            //hvis ja, bliver den ene spilers position retuneret
-            return targets[0].position;
-
+            return targets[0].transform.position;
         }
-
         //ellers laver vi en bunke, hvor den første har en vector 0
         var bounds = new Bounds(targets[0].position, Vector3.zero);
 
@@ -138,7 +146,7 @@ public class cameraFollower : MonoBehaviour
 
         //retunere centrum af alle spilere.
         return bounds.center;
-
+        
     }
-
+    
 }
