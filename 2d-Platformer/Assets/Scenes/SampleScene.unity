@@ -1651,7 +1651,7 @@ GameObject:
   - component: {fileID: 92727502}
   - component: {fileID: 92727501}
   - component: {fileID: 92727508}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Player2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1689,7 +1689,7 @@ MonoBehaviour:
   checkRadius: 0.5
   whatIsGround:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 768
   extraJumpsValue: 2
 --- !u!61 &92727503
 BoxCollider2D:
@@ -2644,7 +2644,7 @@ GameObject:
   - component: {fileID: 739407595}
   - component: {fileID: 739407597}
   - component: {fileID: 739407596}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Player1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2800,7 +2800,7 @@ MonoBehaviour:
   checkRadius: 0.5
   whatIsGround:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 768
   extraJumpsValue: 2
 --- !u!114 &739407596
 MonoBehaviour:
@@ -3059,7 +3059,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1075210193}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
@@ -3374,7 +3374,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1720657099}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
