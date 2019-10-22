@@ -87,7 +87,7 @@ public class cameraFollower : MonoBehaviour
             targets.RemoveAt(0);
         }else if(name == "Player2")
         {
-            targets.RemoveAt(1);
+            targets.RemoveAt(targets.Count-1);
         }
     }
 
