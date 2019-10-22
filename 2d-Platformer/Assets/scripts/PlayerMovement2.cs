@@ -48,4 +48,17 @@ public class PlayerMovement2 : MonoBehaviour
             extraJumps--;                            //Trækker et jump fra
         }
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        
+        if(collision.gameObject.tag == "player1")
+        {
+            if(this.gameObject.transform.position.y > collision.transform.position.y)
+            {
+                extraJumps = extraJumpsValue; //Nulstilles antallet af hop
+            }
+        }
+
+    }
 }
