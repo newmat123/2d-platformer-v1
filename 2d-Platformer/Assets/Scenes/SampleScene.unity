@@ -2088,7 +2088,7 @@ MonoBehaviour:
   offset: {x: 0, y: 3.3, z: -1}
   smotheTime: 0.3
   minzoom: 15
-  maxzoom: 5
+  maxzoom: 8
   ZoomLimiter: 10
 --- !u!1001 &332080672
 PrefabInstance:
