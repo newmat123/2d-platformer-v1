@@ -19,7 +19,7 @@ public class lavaMoveScript : MonoBehaviour
 
     void Update()
     {
-        
+
         if(timer > timeToStart)
         {
             RB.velocity = new Vector2(0, lavaSpeed);

@@ -7,6 +7,8 @@ public class LoadScene : MonoBehaviour
     // then call this to restart game
     public void hardRestartGame()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        
+        SceneManager.LoadScene("SampleScene");
+        
     }
 }
