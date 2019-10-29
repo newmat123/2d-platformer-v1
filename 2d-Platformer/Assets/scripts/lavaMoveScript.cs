@@ -7,8 +7,8 @@ public class lavaMoveScript : MonoBehaviour
 
     public Rigidbody2D RB;
 
-    private float timeToStart;
-    public float timer;
+    public float timeToStart;
+    private float timer;
     public float lavaSpeed;
 
     void Start()
