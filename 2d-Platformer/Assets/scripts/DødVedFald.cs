@@ -5,9 +5,8 @@ using UnityEngine;
 public class DødVedFald : MonoBehaviour
 {
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        
         if(collision.gameObject.tag == "lava")
         {
 
@@ -15,7 +14,5 @@ public class DødVedFald : MonoBehaviour
             Destroy(this.gameObject);
 
         }
-
     }
-
 }
