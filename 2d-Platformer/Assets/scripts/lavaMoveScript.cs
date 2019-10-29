@@ -12,7 +12,6 @@ public class lavaMoveScript : MonoBehaviour
 
     void Start()
     {
-        RB = FindObjectOfType<Rigidbody2D>();
         timeToStart = 3f;
         timer = 0f;
     }
