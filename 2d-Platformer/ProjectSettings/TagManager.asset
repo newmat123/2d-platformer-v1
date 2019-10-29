@@ -7,6 +7,8 @@ TagManager:
   - floor
   - trigger
   - lava
+  - player1
+  - player2
   layers:
   - Default
   - TransparentFX
