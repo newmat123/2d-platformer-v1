@@ -1955,7 +1955,7 @@ MonoBehaviour:
   minzoom: 15
   maxzoom: 8
   ZoomLimiter: 10
-  lose: {fileID: 741505137}
+  deatUI: {fileID: 741505137}
 --- !u!1 &350944523
 GameObject:
   m_ObjectHideFlags: 0

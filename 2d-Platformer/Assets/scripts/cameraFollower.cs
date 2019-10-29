@@ -16,6 +16,7 @@ public class cameraFollower : MonoBehaviour
     public float maxzoom = 5f;
     public float ZoomLimiter = 50f;
 
+    public GameObject deatUI;
 
     private Vector3 velocity;
 
@@ -85,9 +86,17 @@ public class cameraFollower : MonoBehaviour
         if(name == "Player1")
         {
             targets.RemoveAt(0);
+            if(targets.Count == 0)
+            {
+                deatUI.SetActive(true);
+            }
         }else if(name == "Player2")
         {
             targets.RemoveAt(targets.Count-1);
+            if (targets.Count == 0)
+            {
+                deatUI.SetActive(true);
+            }
         }
     }
 
