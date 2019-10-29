@@ -8,7 +8,7 @@ public class lavaMoveScript : MonoBehaviour
     public Rigidbody2D RB;
 
     public float timeToStart;
-    private float timer;
+    public float timer;
     public float lavaSpeed;
 
     void Start()
@@ -19,7 +19,7 @@ public class lavaMoveScript : MonoBehaviour
 
     void Update()
     {
-        
+
         if(timer > timeToStart)
         {
             RB.velocity = new Vector2(0, lavaSpeed);
