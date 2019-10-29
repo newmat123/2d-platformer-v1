@@ -49,3 +49,6 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Lava
+    uniqueID: 312455483
+    locked: 0
