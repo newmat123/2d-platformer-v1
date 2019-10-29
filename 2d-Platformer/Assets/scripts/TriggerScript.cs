@@ -6,13 +6,16 @@ public class TriggerScript : MonoBehaviour
 {
 
 
-    public GameObject winHolder; //det er det gameobject der holder alt ui der skal wærer når man vinder
+    public GameObject[] winHolder; //det er det gameobject der holder alt ui der skal wærer når man vinder
 
 
     public void BackBottun()//funktionen som skal køre når man klikker på knappen
     {
-
-        winHolder.SetActive(false);//sætter win tilbage til false
+        for(int i = 0; i < winHolder.Length; i++)
+        {
+            winHolder[i].SetActive(false);//sætter win tilbage til false
+        }
+        
         Time.timeScale = 1; //starter tiden igen 
         
     }
@@ -21,10 +24,16 @@ public class TriggerScript : MonoBehaviour
     {
         if (collision.gameObject.tag == "trigger") // tjækker om triggeren er den rigtige
         {
-
-            winHolder.SetActive(true); //aktivere win ui
-            Time.timeScale = 0; //pauser tiden eller spilet.
-
+            if(this.gameObject.tag == "player1")
+            {
+                winHolder[1].SetActive(true); //aktivere win ui
+                Time.timeScale = 0; //pauser tiden eller spilet.
+            }
+            else if(this.gameObject.tag == "player2")
+            {
+                winHolder[0].SetActive(true); //aktivere win ui
+                Time.timeScale = 0; //pauser tiden eller spilet.
+            }
         }
     }
 }

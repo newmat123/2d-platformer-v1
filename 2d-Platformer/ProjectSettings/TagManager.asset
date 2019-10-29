@@ -9,6 +9,7 @@ TagManager:
   - lava
   - player1
   - player2
+  - rock
   layers:
   - Default
   - TransparentFX
@@ -20,7 +21,7 @@ TagManager:
   - 
   - Ground
   - Player
-  - 
+  - spike
   - 
   - 
   - 
