@@ -21,4 +21,9 @@ public class startScript : MonoBehaviour
         text.SetActive(true);
         Time.timeScale = 1;
     }
+    public void doExitGame()
+    {
+        Application.Quit();
+    }
+
 }
